@@ -534,6 +534,8 @@ img {
   align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  outline: 1px solid tomato;
 }
 
 .footer .adress-wrapper {
@@ -585,7 +587,8 @@ img {
   cursor: pointer;
 }
 
-.social-links-wrapper > p {
+.social-links-wrapper > p,
+.subscribe-wrapper > p {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -603,6 +606,88 @@ img {
   border-radius: 50%;
 }
 
+.subscribe-wrapper {
+  margin-left: auto;
+}
+
+.footer .form {
+  display: flex;
+}
+
+.footer .form-input {
+  display: block;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  color: var(--secondary-accent-color);
+  background-color: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.form-input::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-accent-color);
+}
+
+.form > .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 200px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+  margin-left: 12px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  color: var(--secondary-accent-color);
+  background-color: var(--primary-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form > .button:hover,
+.form > .button:focus {
+  cursor: pointer;
+  color: var(--primary-accent-color);
+  background-color: var(--secondary-accent-color);
+}
+
+.form .icon-send {
+  margin-left: 11px;
+  fill: var(--secondary-accent-color);
+}
+
+.form > .button:hover .icon-send,
+.form > .button:focus .icon-send {
+  fill: var(--primary-accent-color);
+}
 /* Portfolio page */
 /* Filter */
 .portfolio.container {

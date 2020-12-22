@@ -515,9 +515,19 @@
         </div>
         <div class="subscribe-wrapper">
           <p>Подпишитесь на рассылку</p>
-          <form>
-            <input type="email" name="email" placeholder="E-mail" />
-            <button type="submit">Подписаться</button>
+          <form class="form js-speaker-form">
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <button class="button" type="submit">
+              <span>Подписаться</span>
+              <svg class="icon-send" width="24px" height="24px">
+                <use href="./images/sprite.svg#send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -534,6 +544,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+
     <script>
       (() => {
         document
