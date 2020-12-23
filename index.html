@@ -515,7 +515,7 @@
         </div>
         <div class="subscribe-wrapper">
           <p>Подпишитесь на рассылку</p>
-          <form class="form js-speaker-form">
+          <form class="form js-subscribe-form">
             <input
               class="form-input"
               type="email"
@@ -541,7 +541,8 @@
             <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
-        <form class="form js-speaker-form">
+
+        <form class="form js-modal-form">
           <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
           <label class="form-field">
@@ -581,31 +582,50 @@
           <label class="form-field">
             <span class="form-label">Комментарий</span>
             <textarea
-              class="comment"
+              class="form-input comment"
               name="comment"
               placeholder="Введите текст"
             ></textarea>
           </label>
 
-          <label class="form-field">
-            <input type="checkbox" name="policy" />
-            <span class="form-label"
+          <label class="checkbox-form-field">
+            <input class="checkbox-input" type="checkbox" name="policy" />
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-label"
               >Соглашаюсь с рассылкой и принимаю
-              <span class="agreement">Условия договора</span></span
+              <a class="agreement" href="#" target="blank"
+                >Условия договора</a
+              ></span
             >
           </label>
-          <div class="button-wrapper">
-            <button class="button-send" type="submit">Отправить</button>
-          </div>
+
+          <button class="button-send" type="submit">Отправить</button>
         </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
 
     <script>
       (() => {
         document
-          .querySelector(".js-speaker-form")
+          .querySelector(".js-subscribe-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+
+    <script>
+      (() => {
+        document
+          .querySelector(".js-modal-form")
           .addEventListener("submit", (e) => {
             e.preventDefault();
 
