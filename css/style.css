@@ -932,7 +932,7 @@ img {
 .modal .button-close:focus {
   color: var(--primary-accent-color);
   cursor: pointer;
-  border: 1px solid var(--primary-accent-color);
+  border-color: var(--primary-accent-color);
 }
 
 .button-close .icon-close {
