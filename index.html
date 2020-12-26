@@ -547,7 +547,7 @@
 
           <label class="form-field">
             <span class="form-label">Имя</span>
-            <input type="name" class="form-input" name="name" placeholder=" " />
+            <input type="text" class="form-input" name="name" placeholder=" " />
             <svg class="form-icon" width="18px" height="18px">
               <use href="./images/sprite.svg#person"></use>
             </svg>
@@ -588,16 +588,12 @@
             ></textarea>
           </label>
 
-          <label class="checkbox-form-field">
+          <!-- <span class="checkbox-icon"></span> -->
+          <lable class="checkbox-label"
+            >Соглашаюсь с рассылкой и принимаю
+            <a class="agreement" href="#" target="blank">Условия договора</a>
             <input class="checkbox-input" type="checkbox" name="policy" />
-            <span class="checkbox-icon"></span>
-            <span class="checkbox-label"
-              >Соглашаюсь с рассылкой и принимаю
-              <a class="agreement" href="#" target="blank"
-                >Условия договора</a
-              ></span
-            >
-          </label>
+          </lable>
 
           <button class="button-send" type="submit">Отправить</button>
         </form>
