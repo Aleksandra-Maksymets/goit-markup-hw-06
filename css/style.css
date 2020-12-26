@@ -1067,10 +1067,11 @@ img {
 .checkbox-form-field {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .modal .checkbox-label {
+  display: flex;
+  align-items: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -1095,9 +1096,8 @@ img {
 }
 
 .checkbox-form-field .checkbox-label::before {
-  display: block;
-  content: "";
   display: inline-block;
+  content: "";
   width: 16px;
   height: 15px;
   margin-right: 9px;
